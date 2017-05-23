@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QtWidgets>
 #include <QMutex>
+#include <QDesktopWidget>
 
 QMutex notificationLock;
 
@@ -14,7 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Make it borderless and move it to the top left/origin
     setWindowFlags(Qt::FramelessWindowHint);
-    move(0, 0);
+
+    // Position it
+    moveToTopLeft();
 
     setCentralWidget(&notificationArea);
 
@@ -30,6 +33,16 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+// Moves the notification are to the top left corner of the primary screen
+void MainWindow::moveToTopLeft()
+{
+    QDesktopWidget* desktop = QApplication::desktop();
+
+    QWidget* primaryScreen = desktop->screen(desktop->primaryScreen());
+
+    move(primaryScreen->pos());
 }
 
 // Adds a notification object to show

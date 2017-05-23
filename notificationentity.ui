@@ -68,6 +68,9 @@ QGroupBox#groupBox {
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;</string>
+        </property>
         <property name="text">
          <string>MainNotification</string>
         </property>
@@ -83,6 +86,9 @@ QGroupBox#groupBox {
        <widget class="QLabel" name="timeLabel">
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;</string>
         </property>
         <property name="text">
          <string>TextLabel</string>

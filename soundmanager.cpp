@@ -1,6 +1,9 @@
 #include "soundmanager.h"
 #include "staticitems.h"
 
+#include <QDir>
+#include <QFileInfo>
+
 SoundManager::SoundManager()
 {
     player.reset(new QMediaPlayer);
@@ -10,7 +13,7 @@ SoundManager::SoundManager()
 void SoundManager::playSound(QString message) {
     QString soundFile = StaticItems::getFilename(message);
 
-    player->setMedia(QUrl::fromLocalFile(soundFile));
+    player->setMedia(QUrl::fromLocalFile(QFileInfo(soundFile).absoluteFilePath()));
     player->setVolume(100);
     player->play();
 }

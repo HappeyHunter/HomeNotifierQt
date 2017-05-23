@@ -24,6 +24,7 @@ public:
 private:
     void visibilityCheck();
     void playNewNotification(QString message);
+    void moveToTopLeft();
 
 private:
     QTimer timer;

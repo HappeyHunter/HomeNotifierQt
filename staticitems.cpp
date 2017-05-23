@@ -1,4 +1,4 @@
-#include "StaticItems.h"
+#include "staticitems.h"
 #include <iostream>
 
 const QString StaticItems::IDENTITY_FILE = "Resources/IdentitySettings";
