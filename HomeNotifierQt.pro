@@ -23,31 +23,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    notificationentity.cpp \
-    notificationarea.cpp \
-    soundmanager.cpp \
-    configmanager.cpp \
-    networkmanager.cpp \
-    staticitems.cpp \
-    notificationmanager.cpp \
-    notificationfactory.cpp
+SOURCES += src/main.cpp\
+        src/mainwindow.cpp \
+    src/notificationentity.cpp \
+    src/notificationarea.cpp \
+    src/soundmanager.cpp \
+    src/configmanager.cpp \
+    src/networkmanager.cpp \
+    src/staticitems.cpp \
+    src/notificationmanager.cpp \
+    src/notificationfactory.cpp
 
-HEADERS  += mainwindow.h \
-    notificationentity.h \
-    notificationarea.h \
-    soundmanager.h \
-    configmanager.h \
-    networkmanager.h \
-    staticitems.h \
-    notificationmanager.h \
-    notificationfactory.h
+HEADERS  += src/mainwindow.h \
+    src/notificationentity.h \
+    src/notificationarea.h \
+    src/soundmanager.h \
+    src/configmanager.h \
+    src/networkmanager.h \
+    src/staticitems.h \
+    src/notificationmanager.h \
+    src/notificationfactory.h
 
 FORMS    += \
-    notificationentity.ui \
-    mainwindow.ui \
-    notificationarea.ui
+    src/notificationentity.ui \
+    src/mainwindow.ui \
+    src/notificationarea.ui
 
 DISTFILES += \
     Resources/comeDown.wav \
